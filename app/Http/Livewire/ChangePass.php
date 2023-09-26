@@ -72,7 +72,6 @@ class ChangePass extends Component
             Mail::to('raularellanoguevara@gmail.com')->send(new MailableChangePass());
             $this->dispatchBrowserEvent('success', ['message' => 'Datos actualizados.']);
         } catch (\Throwable $th) {
-            dd($th);
             $this->dispatchBrowserEvent('error', ['message' => 'Datos no guardados algo esta mal.']);
             //throw $th;
         }

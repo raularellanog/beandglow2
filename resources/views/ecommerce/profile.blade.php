@@ -40,7 +40,7 @@
                 </div>
                 <div class="hidden p-4 rounded-lg bg-gray-50 " id="dashboard" role="tabpanel"
                     aria-labelledby="dashboard-tab">
-                    @livewire('address')
+                    @livewire('address', ['address_id' => session('address_id')])
                 </div>
                 <div class="hidden p-4 rounded-lg bg-gray-50 " id="settings" role="tabpanel"
                     aria-labelledby="settings-tab">
@@ -48,7 +48,7 @@
                 </div>
                 <div class="hidden p-4 rounded-lg bg-gray-50 " id="contacts" role="tabpanel"
                     aria-labelledby="contacts-tab">
-                   @livewire('change-pass')
+                    @livewire('change-pass')
                 </div>
             </div>
         </div>
